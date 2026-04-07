@@ -94,19 +94,23 @@ const listaProdutos = [
 ]
 
 function criarCard(produtos) {
-  const card = document.createElement('div')
-  card.className = 'card'
+  const card      = document.createElement('div')
+  card.className  = 'card'
 
-  const foto = document.createElement('img')
-  foto.src = `./img${produtos.imagem}`
 
-  const nome = document.createElement('h3')
-  nome.textContent = produtos.nome
+  const fotoDoProduto   = document.createElement('img')
+  foto.src              = `./img${produtos.imagem}`
+  foto.alt              = `Foto de ${produtos.nome}`
 
-  const valor = document.createElement('span')
+
+  const nome        = document.createElement('h5')
+  nome.textContent  = produtos.nome
+
+
+  const valor       = document.createElement('h4')
   valor.textContent = produtos.valor
 
-  card.append(foto, nome, valor)
+  card.append(fotoDoProduto, nome, valor)
 
   return card
 }
