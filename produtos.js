@@ -97,24 +97,24 @@ function criarCard(listaProdutos) {
   const card      = document.createElement('div')
   card.className  = 'card'
 
-
+ 
   const fotoDoProduto   = document.createElement('img')
-  fotoDoProduto.src     = `./img${listaProdutos.imagem}`
-  fotoDoProduto.alt     = `Foto de ${listaProdutos.nome}`
+  fotoDoProduto.src     = `./img/${listaProdutos.imagem}`
+  fotoDoProduto.alt     = `Foto do produto ${listaProdutos.nome}`
 
 
-  const nome        = document.createElement('h3')
+  const nome        = document.createElement('nome')
   nome.textContent  = listaProdutos.nome
 
 
-  const descricao        = document.createElement('p')
+  const descricao        = document.createElement('descricao')
   descricao.textContent  = listaProdutos.descricao
 
 
-  const preco       = document.createElement('h4')
+  const preco       = document.createElement('preco')
   preco.textContent = listaProdutos.preco
 
-  card.append(fotoDoProduto, nome, descricao, preco)
+  card.append(preco, descricao, fotoDoProduto, nome)
 
   return card
 }
@@ -122,3 +122,5 @@ function criarCard(listaProdutos) {
 const cards = listaProdutos.map(criarCard)
 
 document.getElementById('container').replaceChildren(...cards)
+
+console.log('oi')
