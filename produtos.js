@@ -92,3 +92,25 @@ const listaProdutos = [
     "classificacao": 4
   }
 ]
+
+function criarCard(produtos) {
+  const card = document.createElement('div')
+  card.className = 'card'
+
+  const foto = document.createElement('img')
+  foto.src = `./img${produtos.imagem}`
+
+  const nome = document.createElement('h3')
+  nome.textContent = produtos.nome
+
+  const valor = document.createElement('span')
+  valor.textContent = produtos.valor
+
+  card.append(foto, nome, valor)
+
+  return card
+}
+
+const cards = produtos.map(criarCard)
+
+document.getElementById('container').replaceChild(...cards)
