@@ -13,14 +13,14 @@ body {
     font-family: Arial, sans-serif;
 }
 
-#container {
+#container-1 {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.card {
+.card-1 {
     background-color: #fff;
     border-radius: 12px;
     width: 150px;
@@ -31,22 +31,36 @@ body {
     gap: 12px;
 }
 
-.card img {
+.card-1 img {
     width: 150px;
     height: 120px;
     object-fit:contain;
 }
 
-.card-info {
-    text-align: center;
+.card-1 p {
+    width: 100;
 }
 
-.card-info h5 {
-    font-size: 1rem;
-    color: #111;
+#container-2 {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.card-info span {
-    font-size: 0.85rem;
-    color: #666;
+.card-2 {
+    background-color: #fff;
+    border-radius: 12px;
+    width: 150px;
+    padding: 20px 160px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 12px;
+}
+
+.card-2 img {
+    width: 150px;
+    height: 120px;
+    object-fit:contain;
 }

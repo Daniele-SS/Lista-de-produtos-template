@@ -93,28 +93,32 @@ const listaProdutos = [
   }
 ]
 
-function criarCard(produtos) {
+function criarCard(listaProdutos) {
   const card      = document.createElement('div')
   card.className  = 'card'
 
 
   const fotoDoProduto   = document.createElement('img')
-  foto.src              = `./img${produtos.imagem}`
-  foto.alt              = `Foto de ${produtos.nome}`
+  fotoDoProduto.src     = `./img${listaProdutos.imagem}`
+  fotoDoProduto.alt     = `Foto de ${listaProdutos.nome}`
 
 
-  const nome        = document.createElement('h5')
-  nome.textContent  = produtos.nome
+  const nome        = document.createElement('h3')
+  nome.textContent  = listaProdutos.nome
 
 
-  const valor       = document.createElement('h4')
-  valor.textContent = produtos.valor
+  const descricao        = document.createElement('p')
+  descricao.textContent  = listaProdutos.descricao
 
-  card.append(fotoDoProduto, nome, valor)
+
+  const preco       = document.createElement('h4')
+  preco.textContent = listaProdutos.preco
+
+  card.append(fotoDoProduto, nome, descricao, preco)
 
   return card
 }
 
-const cards = produtos.map(criarCard)
+const cards = listaProdutos.map(criarCard)
 
-document.getElementById('container').replaceChild(...cards)
+document.getElementById('container').replaceChildren(...cards)
