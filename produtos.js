@@ -122,5 +122,3 @@ function criarCard(listaProdutos) {
 const cards = listaProdutos.map(criarCard)
 
 document.getElementById('container').replaceChildren(...cards)
-
-console.log('oi')
